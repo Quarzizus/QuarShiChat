@@ -1,0 +1,57 @@
+@import "../index.scss";
+
+.Form {
+  background-color: $gray-dark;
+  height: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 25px;
+  color: white;
+  font-family: $font;
+
+  h2 {
+    font-size: 30px;
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    label {
+      font-size: 1.2rem;
+    }
+    input {
+      height: 40px;
+      background-color: rgba(255, 255, 255, 0.075);
+      border: none;
+      padding: 0 20px;
+      color: white;
+      font-family: $font;
+    }
+    input:focus,
+    input:-webkit-autofill {
+      background-color: none;
+      outline: none;
+    }
+  }
+  h4 {
+    font-size: 1rem;
+    cursor: pointer;
+    color: $green;
+  }
+  button {
+    width: 100%;
+    height: 40px;
+    background-color: $green;
+    color: white;
+    border: none;
+    font-family: $font;
+    cursor: pointer;
+  }
+  .button-google {
+    background-color: white;
+    color: black;
+  }
+}

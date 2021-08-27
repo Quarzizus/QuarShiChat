@@ -1,0 +1,59 @@
+@import "../index.scss";
+
+.Login {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  .Login_picture {
+    width: 55%;
+    height: 100%;
+    position: relative;
+    background: $purple;
+    img {
+      width: 200px;
+      animation: orbita 3s infinite;
+    }
+    .marte {
+      position: absolute;
+      top: calc(50% - 180px);
+      left: 20px;
+      animation-delay: 0.5s;
+    }
+    .saturno {
+      width: 250px;
+      position: absolute;
+      top: calc(50% - 50px);
+      right: calc(50% - 80px);
+      animation-delay: 0.2s;
+    }
+    .urano {
+      position: absolute;
+      top: calc(50% + 60px);
+      right: 20px;
+      animation-delay: 0.7s;
+    }
+  }
+
+  .Form_container {
+    width: 609px;
+    min-width: 45%;
+    height: 100%;
+    background-color: $gray-dark;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 100px;
+  }
+}
+
+@keyframes orbita {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, -5px);
+  }
+  100% {
+    transform: translate(0, 0px);
+  }
+}

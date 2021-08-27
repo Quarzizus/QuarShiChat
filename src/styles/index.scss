@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$green: #231d83;
+$purple: linear-gradient(to top, rgb(29, 27, 27), rgb(31, 14, 90));
+$gray-dark: #1e2325;
+$gray-light: #3c3c3c;
+
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans&display=swap");
+
+$font: "Public Sans", sans-serif;
+
+body {
+  background: $purple;
+}
