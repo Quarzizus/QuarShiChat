@@ -17,7 +17,6 @@ const Form = () => {
     email: null,
     password: null,
   });
-
   const handleChange = ({ target }) => {
     setDatauser({
       ...datauser,
