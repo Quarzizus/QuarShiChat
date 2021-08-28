@@ -1,12 +1,10 @@
 .Input {
-  width: 800px;
+  width: 100%;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.397);
-  height: 80px;
+  background-color: rgba(29, 27, 27, 0.301);
   display: flex;
   align-items: center;
-  position: fixed;
-  bottom: 0;
+  grid-row: 2/3;
   input {
     width: 100%;
     border-radius: 15px;

@@ -1,0 +1,14 @@
+@import "../index.scss";
+
+.Message {
+  padding: 10px;
+  max-width: 50%;
+  background-color: rgb(181, 3, 197);
+  margin-bottom: 10px;
+  border-radius: 0 10px 10px 10px;
+  word-wrap: break-word;
+  p {
+    font-family: $font;
+    font-weight: 500;
+  }
+}
