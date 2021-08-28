@@ -2,13 +2,21 @@
 
 .Message {
   padding: 10px;
-  max-width: 50%;
-  background-color: rgb(181, 3, 197);
+  max-width: 47%;
   margin-bottom: 10px;
+  background-color: rgb(42, 74, 144);
   border-radius: 0 10px 10px 10px;
   word-wrap: break-word;
+  display: flex;
+  align-items: center;
   p {
     font-family: $font;
     font-weight: 500;
   }
+}
+
+.Message_own {
+  align-self: flex-end;
+  border-radius: 10px 0 10px 10px;
+  background-color: rgb(83, 84, 141);
 }

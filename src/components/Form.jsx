@@ -53,7 +53,6 @@ const Form = () => {
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider)
       .then((result) => {
-        console.log(result.user);
         history.push("/chat");
       })
       .catch((error) => {

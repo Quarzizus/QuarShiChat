@@ -8,5 +8,9 @@
   grid-auto-rows: 1fr 80px;
   .Chat_container {
     padding: 0 25px;
+    overflow-y: visible;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
   }
 }

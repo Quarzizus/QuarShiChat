@@ -8,7 +8,6 @@ const Input = () => {
   const auth = getAuth();
   const user = auth.currentUser;
   const [message, setMessage] = useState("");
-
   const handleChange = (e) => {
     setMessage(e.target.value);
   };
