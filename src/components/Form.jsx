@@ -7,16 +7,28 @@ import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
 } from "firebase/auth";
+import { getDatabase, ref, update } from "firebase/database";
 import "../styles/components/Form.scss";
 
 const Form = () => {
   const auth = getAuth();
   const history = useHistory();
+  const db = getDatabase();
   const [error, setError] = useState(null);
   const [datauser, setDatauser] = useState({
     email: null,
     password: null,
   });
+
+  const setUserDb = (id) => {
+    const chats = {
+      chats: "welcome",
+    };
+    const updates = {
+      ["/users/" + id]: chats,
+    };
+    update(ref(db), updates);
+  };
   const handleChange = ({ target }) => {
     setDatauser({
       ...datauser,
@@ -49,16 +61,17 @@ const Form = () => {
       setError(error.message);
     }
   };
-  const loginWithGoogle = () => {
-    const provider = new GoogleAuthProvider();
-    signInWithPopup(auth, provider)
-      .then((result) => {
-        history.push("/chat");
-      })
-      .catch((error) => {
-        console.log(error);
-        setError(error.message);
-      });
+  const loginWithGoogle = async () => {
+    try {
+      const provider = new GoogleAuthProvider();
+      const popup = await signInWithPopup(auth, provider);
+      setUserDb(popup.user.uid);
+      console.log(popup.user.uid);
+      // history.push("/chat");
+    } catch (error) {
+      console.log(error);
+      setError(error.message);
+    }
   };
 
   return (
