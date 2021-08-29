@@ -12,16 +12,16 @@ const Chat = () => {
   const user = auth.currentUser;
   const [data, setData] = useState(null);
 
-  useEffect(() => {
-    const messagesRef = ref(db, "messages/");
-    onValue(messagesRef, (snapshot) => {
-      setData(snapshot);
-    });
-  }, []);
+  // useEffect(() => {
+  //   const messagesRef = ref(db, "messages/");
+  //   onValue(messagesRef, (snapshot) => {
+  //     setData(snapshot);
+  //   });
+  // }, []);
   return (
     <section className="Chat">
       <div className="Chat_container" ref={chatRef}>
-        {!user ? <h2>Cargando usuario</h2> : <h2>{user.email}</h2>}
+        {/* {!user ? <h2>Cargando usuario</h2> : <h2>{user.email}</h2>}
         {data
           ? Object.entries(data.val()).map(([key, val]) => {
               return (
@@ -34,7 +34,7 @@ const Chat = () => {
                 />
               );
             })
-          : null}
+          : null} */}
       </div>
       <Input />
     </section>

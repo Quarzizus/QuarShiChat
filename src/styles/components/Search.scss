@@ -1,0 +1,60 @@
+@import "../index.scss";
+.Search {
+  background-color: rgba(29, 27, 27, 0.301);
+  width: 100%;
+  position: relative;
+  height: 60px;
+  .Search_container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding: 10px 20px;
+    justify-content: space-between;
+    .Input {
+      width: 0;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.103);
+      border: white;
+      color: white;
+      padding: 0px;
+      transition: 1s all ease;
+    }
+    .Active {
+      padding: 20px;
+      width: 85%;
+    }
+    button {
+      width: 12%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.103);
+      border: none;
+      color: white;
+    }
+  }
+
+  .Options {
+    position: absolute;
+    top: 60px;
+    left: 100%;
+    width: 100%;
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    font-family: $font;
+    background-color: rgba(255, 255, 255, 0.116);
+    transition: 1s all ease;
+    li {
+      background-color: rgba(255, 255, 255, 0.103);
+      height: 60px;
+      padding: 0 20px;
+      color: white;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.178);
+    }
+  }
+  .None {
+    left: 0;
+  }
+}

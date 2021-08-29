@@ -1,11 +1,11 @@
 .Chat {
-  max-width: 800px;
   background-color: rgb(1, 2, 8);
+  width: 100%;
   margin: 0 auto;
-  height: 100vh;
   color: white;
   display: grid;
   grid-auto-rows: 1fr 80px;
+  grid-column: 2/3;
   .Chat_container {
     padding: 0 25px;
     overflow-y: visible;
