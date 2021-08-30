@@ -21,12 +21,8 @@ const Form = () => {
   });
 
   const setUserDb = (data) => {
-    const chats = {
-      chats: "welcome",
-    };
     const updates = {
-      ["/users/" + data.uid]: chats,
-      ["/users/" + data.uid + "name"]: data.displayName,
+      ["/users/" + data.uid]: data.displayName,
     };
     update(ref(db), updates);
   };
@@ -67,8 +63,7 @@ const Form = () => {
       const provider = new GoogleAuthProvider();
       const popup = await signInWithPopup(auth, provider);
       setUserDb(popup.user);
-      console.log(popup.user.uid);
-      // history.push("/chat");
+      history.push("/chat");
     } catch (error) {
       console.log(error);
       setError(error.message);

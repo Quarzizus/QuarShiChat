@@ -7,9 +7,10 @@ const Message = ({ data, user, name, chat }) => {
     chat.current.scrollTop = chat.current.scrollHeight;
   }, []);
   return (
-    <article className={`Message ${user == name ? "Message_own" : null} `}>
-      <Avatar name={data.name} />
-      <p>{data.message}</p>
+    <article className={`Message ${user == data.user ? "Message_own" : null} `}>
+      <Avatar name={data.user} />
+      {console.log(data.user, user)}
+      <p>{data.content}</p>
     </article>
   );
 };

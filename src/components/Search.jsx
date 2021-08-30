@@ -1,28 +1,32 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useContext } from "react";
 import { getDatabase, ref, child, get } from "firebase/database";
+import { getAuth } from "firebase/auth";
+import ChatContext from "../context/ChatContext";
 import "../styles/components/Search.scss";
 
 const Search = () => {
+  const { setChatSelect } = useContext(ChatContext);
   const db = getDatabase();
-  const [users, setUsers] = useState("");
+  const auth = getAuth();
+  // const user = auth.currentUser;
+  const [channels, setChannels] = useState("");
   const inputRef = useRef();
   const optionsRef = useRef();
 
-  const getUsers = async () => {
+  const getChannels = async () => {
     try {
-      const response = await get(child(ref(db), "users/"));
+      const response = await get(child(ref(db), "channels/"));
       return response;
     } catch (error) {
       console.log(error.message);
     }
   };
-
-  const filterUsers = async () => {
+  const filterChannels = async () => {
     const input = inputRef.current;
-    const data = await getUsers();
-    setUsers(
-      Object.values(data.val()).filter((value) =>
-        value.name.includes(input.value)
+    const data = await getChannels();
+    setChannels(
+      Object.values(data.val()).filter((channel) =>
+        channel.name.includes(input.value)
       )
     );
   };
@@ -34,29 +38,30 @@ const Search = () => {
     input.focus();
     input.value = "";
   };
+
   return (
     <section className="Search">
       <div className="Search_container">
         <input
           type="text"
           ref={inputRef}
-          onChange={filterUsers}
+          onChange={filterChannels}
           className="Input"
         />
         <button onClick={searchActive}>Q</button>
       </div>
       <ul className="Options" ref={optionsRef}>
-        {users
-          ? Object.values(users).map((u, i) => (
+        {channels
+          ? Object.entries(channels).map(([key, value]) => (
               <li
-                key={i}
+                key={key}
                 onClick={() => {
-                  setUsers("");
+                  setChatSelect(value.name);
+                  setChannels("");
                   searchActive();
-                  console.log(users[i]);
                 }}
               >
-                {u.name}
+                {value.name}
               </li>
             ))
           : null}
