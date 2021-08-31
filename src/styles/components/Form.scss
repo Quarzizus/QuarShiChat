@@ -1,7 +1,7 @@
 @import "../index.scss";
 
 .Form {
-  background: rgba(255, 255, 255, 0.164);
+  background: rgba(255, 255, 255, 0.541);
   height: 400px;
   width: 100%;
   display: flex;
@@ -9,7 +9,7 @@
   justify-content: space-around;
   align-items: center;
   padding: 25px;
-  color: white;
+  color: black;
   font-family: $font;
 
   h2 {
@@ -24,10 +24,10 @@
     }
     input {
       height: 40px;
-      background-color: rgba(255, 255, 255, 0.075);
+      background-color: rgba(0, 0, 0, 0.157);
       border: none;
       padding: 0 20px;
-      color: $white;
+      color: black;
       font-family: $font;
     }
     input:focus,
@@ -51,8 +51,8 @@
     cursor: pointer;
   }
   .button-google {
-    background: $white;
-    color: black;
+    background: linear-gradient(to right, rgb(84, 11, 167), rgb(22, 38, 128));
+    color: $white;
   }
 }
 

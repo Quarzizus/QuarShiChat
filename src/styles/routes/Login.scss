@@ -42,7 +42,10 @@
     width: 609px;
     min-width: 45%;
     height: 100%;
-    background: linear-gradient(to right, rgb(84, 11, 167), rgb(22, 38, 128));
+    background: linear-gradient(
+      to right,
+      rgb(249, 248, 250) rgb(253, 253, 255)
+    );
     display: flex;
     justify-content: center;
     align-items: center;
