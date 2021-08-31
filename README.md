@@ -1,2 +1,7 @@
 # QuarShiChat
-QuarShitChat is a chat realtime with firebase (Database, Authentication, Hosting)  and React 
+You can create channels for talk with your friends.
+
+QuarShitChat is a chat realtime made with firebase (Database, Authentication, Hosting) and React.
+
+## Page 
+https://quarshichat.web.app/
