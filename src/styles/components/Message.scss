@@ -2,9 +2,9 @@
 
 .Message {
   padding: 10px;
-  max-width: 47%;
+  max-width: 60%;
   margin-top: 10px;
-  background-color: rgb(42, 74, 144);
+  background: linear-gradient(to right, rgb(84, 11, 167), rgb(22, 38, 128));
   border-radius: 0 10px 10px 10px;
   word-wrap: break-word;
   display: flex;
@@ -12,11 +12,12 @@
   p {
     font-family: $font;
     font-weight: 500;
+    color: $white;
   }
 }
 
 .Message_own {
   align-self: flex-end;
   border-radius: 10px 0 10px 10px;
-  background-color: rgb(83, 84, 141);
+  background: linear-gradient(to right, rgb(91, 197, 144), rgb(81, 159, 179));
 }

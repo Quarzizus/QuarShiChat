@@ -1,7 +1,7 @@
 @import "../index.scss";
 
 .AddChannel {
-  background-color: rgb(14, 15, 15);
+  background: linear-gradient(to bottom, rgb(236, 233, 233), white);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -10,9 +10,10 @@
     margin-right: 30px;
     width: 20px;
     height: 20px;
+    color: rgba(0, 0, 0, 0.513);
   }
   .AddChannel_icon-add:hover {
-    color: white;
+    color: black;
     cursor: pointer;
   }
   input {
@@ -20,12 +21,12 @@
     padding: 15px 0;
     background-color: transparent;
     border: none;
-    color: white;
+    color: black;
     font-family: $font;
     font-size: 16px;
   }
   input::placeholder {
-    color: rgba(255, 255, 255, 0.87);
+    color: black;
   }
   input:focus {
     outline: none;

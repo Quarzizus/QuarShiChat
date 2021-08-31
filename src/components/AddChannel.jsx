@@ -7,11 +7,16 @@ import "../styles/components/AddChannel.scss";
 const AddChannel = () => {
   const db = getDatabase();
   const [addChannelData, setAddChannelData] = useState("");
-
+  const validationAddChat = /^\w/;
   const handleAdd = (e) => {
     setAddChannelData(e.target.value);
     const channelData = {
-      messages: "nothing",
+      messages: {
+        0: {
+          user: "Architect",
+          content: "Welcome at the nothing",
+        },
+      },
       name: addChannelData,
     };
     const updates = {
@@ -19,7 +24,7 @@ const AddChannel = () => {
     };
     if (
       (e.key === "Enter" || !e.target.classList.contains("addInput")) &&
-      addChannelData
+      validationAddChat.test(e.target.value)
     ) {
       setAddChannelData("");
       update(ref(db), updates);

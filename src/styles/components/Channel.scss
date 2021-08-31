@@ -1,18 +1,19 @@
 @import "../index.scss";
 
 .Channels {
-  color: white;
+  color: $white;
   display: flex;
   font-family: $font;
   flex-direction: column;
 
   .Channel {
-    background-color: rgba(255, 255, 255, 0.103);
+    background-color: rgb(255, 255, 255);
     align-items: center;
     cursor: pointer;
     padding: 20px;
     height: 50px;
     display: flex;
     margin-bottom: 2px;
+    color: black;
   }
 }

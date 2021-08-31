@@ -1,13 +1,15 @@
-import React, { useState, useEffect } from "react";
-import { getDatabase, get, ref, child, onValue } from "firebase/database";
+import React, { useState, useEffect, useContext } from "react";
+import { getDatabase, ref, onValue } from "firebase/database";
 import Channel from "../components/Channel";
 import Search from "../components/Search";
 import "../styles/containers/Contact.scss";
 import AddChannel from "../components/AddChannel";
+import ChatContext from "../context/ChatContext";
 
 const Contact = () => {
   const db = getDatabase();
   const [channels, setChannels] = useState(null);
+  const { open } = useContext(ChatContext);
 
   const getChannels = async () => {
     try {
@@ -24,7 +26,7 @@ const Contact = () => {
   }, []);
 
   return (
-    <section className="Contact">
+    <section className={`Contact ${open ? "Contact_active" : null}`}>
       <Search />
       <h2>Channels</h2>
       <div className="Channels">

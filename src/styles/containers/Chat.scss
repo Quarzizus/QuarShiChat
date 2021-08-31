@@ -1,20 +1,32 @@
 @import "../index.scss";
 
 .Chat {
-  background-color: rgb(12, 8, 15);
+  background: linear-gradient(to bottom, rgb(236, 233, 233), white);
   width: 100%;
   margin: 0 auto;
-  color: white;
+  color: black;
   display: grid;
   grid-auto-rows: 60px calc(100vh - 140px) 80px;
   grid-column: 2/3;
 
-  h2 {
-    font-family: $font;
+  .Chat_name {
     display: flex;
-    padding-left: 20px;
+    padding: 0 20px;
     align-items: center;
-    border-bottom: 1px solid rgba(251, 251, 251, 0.24);
+    border-bottom: 3px solid rgba(0, 0, 0, 0.466);
+    justify-content: space-between;
+    h2 {
+      font-family: $font;
+    }
+    button {
+      border: none;
+      display: none;
+      #Chat_name-icon {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+      }
+    }
   }
   .Chat_container {
     padding: 0 25px;
@@ -23,5 +35,16 @@
     display: flex;
     flex-direction: column;
     grid-row: 2/3;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .Chat {
+    grid-column: 1/-1;
+    .Chat_name {
+      button {
+        display: block;
+      }
+    }
   }
 }

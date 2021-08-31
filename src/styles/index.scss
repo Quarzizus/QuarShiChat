@@ -4,15 +4,16 @@
   box-sizing: border-box;
 }
 
-$green: #231d83;
-$purple: linear-gradient(to top, rgb(29, 27, 27), rgb(25, 24, 29));
-$gray-dark: #1e2325;
-$gray-light: #3c3c3c;
+$background: linear-gradient(to top, rgb(241, 241, 241), rgb(235, 235, 235));
+$green: #95c774;
+$gray: #110e2e;
+$white: #f8f1ff;
+$blue: rgb(5, 11, 37);
 
 @import url("https://fonts.googleapis.com/css2?family=Public+Sans&display=swap");
 
 $font: "Public Sans", sans-serif;
 
 body {
-  background: $purple;
+  background: $background;
 }

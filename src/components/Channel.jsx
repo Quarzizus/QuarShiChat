@@ -3,9 +3,15 @@ import ChatContext from "../context/ChatContext";
 import "../styles/components/Channel.scss";
 
 const Channel = ({ name }) => {
-  const { setChatSelect } = useContext(ChatContext);
+  const { setChatSelect, setOpen, open } = useContext(ChatContext);
   return (
-    <article className="Channel" onClick={() => setChatSelect(name)}>
+    <article
+      className="Channel"
+      onClick={() => {
+        setChatSelect(name);
+        setOpen(!open);
+      }}
+    >
       <h3>#{name}</h3>
     </article>
   );

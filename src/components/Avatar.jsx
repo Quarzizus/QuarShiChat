@@ -6,8 +6,8 @@ const Avatar = ({ name }) => {
   const avatarUrl = generateAvatar({
     uppercase: true,
     name: name,
-    background: "231d83",
-    color: "FFFFFF",
+    background: "FFFFFF",
+    color: "000000",
     fontsize: 0.5,
     bold: true,
     length: 2,
