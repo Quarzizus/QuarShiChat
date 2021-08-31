@@ -1,16 +1,27 @@
+@import "../index.scss";
+
 .Chat {
   background-color: rgb(12, 8, 15);
   width: 100%;
   margin: 0 auto;
   color: white;
   display: grid;
-  grid-auto-rows: 1fr 80px;
+  grid-auto-rows: 60px calc(100vh - 140px) 80px;
   grid-column: 2/3;
+
+  h2 {
+    font-family: $font;
+    display: flex;
+    padding-left: 20px;
+    align-items: center;
+    border-bottom: 1px solid rgba(251, 251, 251, 0.24);
+  }
   .Chat_container {
     padding: 0 25px;
     overflow-y: visible;
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
+    grid-row: 2/3;
   }
 }

@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { getDatabase, ref, update, push, child, set } from "firebase/database";
+import { getDatabase, ref, update, push, child } from "firebase/database";
 import ChatContext from "../context/ChatContext";
 import { getAuth } from "firebase/auth";
 import "../styles/components/Input.scss";

@@ -1,0 +1,33 @@
+@import "../index.scss";
+
+.AddChannel {
+  background-color: rgb(14, 15, 15);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  .AddChannel_icon-add {
+    margin-right: 30px;
+    width: 20px;
+    height: 20px;
+  }
+  .AddChannel_icon-add:hover {
+    color: white;
+    cursor: pointer;
+  }
+  input {
+    width: 100%;
+    padding: 15px 0;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-family: $font;
+    font-size: 16px;
+  }
+  input::placeholder {
+    color: rgba(255, 255, 255, 0.87);
+  }
+  input:focus {
+    outline: none;
+  }
+}

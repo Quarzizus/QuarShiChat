@@ -18,11 +18,11 @@ const Chat = () => {
     onValue(ref(db, "channels/" + chatSelect + "/messages"), (snapshot) => {
       setData(snapshot.val());
     });
-    console.log(chatSelect);
   }, [chatSelect]);
 
   return (
     <section className="Chat">
+      <h2>#{chatSelect}</h2>
       <div className="Chat_container" ref={chatRef}>
         {data
           ? Object.entries(data).map(([key, value]) => (

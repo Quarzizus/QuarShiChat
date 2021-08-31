@@ -9,7 +9,6 @@ const Message = ({ data, user, name, chat }) => {
   return (
     <article className={`Message ${user == data.user ? "Message_own" : null} `}>
       <Avatar name={data.user} />
-      {console.log(data.user, user)}
       <p>{data.content}</p>
     </article>
   );

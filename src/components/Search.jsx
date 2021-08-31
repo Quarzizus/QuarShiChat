@@ -1,5 +1,7 @@
 import React, { useState, useRef, useContext } from "react";
 import { getDatabase, ref, child, get } from "firebase/database";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { getAuth } from "firebase/auth";
 import ChatContext from "../context/ChatContext";
 import "../styles/components/Search.scss";
@@ -48,7 +50,9 @@ const Search = () => {
           onChange={filterChannels}
           className="Input"
         />
-        <button onClick={searchActive}>Q</button>
+        <button onClick={searchActive}>
+          <FontAwesomeIcon icon={faSearch} />
+        </button>
       </div>
       <ul className="Options" ref={optionsRef}>
         {channels

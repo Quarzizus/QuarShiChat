@@ -7,7 +7,9 @@
   h2 {
     color: white;
     font-family: $font;
-    margin: 10px 0 20px 0;
+    height: 70px;
+    display: flex;
+    align-items: center;
     padding-left: 20px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.376);
   }

@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { getDatabase, get, ref, child } from "firebase/database";
+import { getDatabase, get, ref, child, onValue } from "firebase/database";
 import Channel from "../components/Channel";
 import Search from "../components/Search";
 import "../styles/containers/Contact.scss";
+import AddChannel from "../components/AddChannel";
 
 const Contact = () => {
   const db = getDatabase();
@@ -10,8 +11,9 @@ const Contact = () => {
 
   const getChannels = async () => {
     try {
-      const response = await get(child(ref(db), "channels/"));
-      setChannels(response.val());
+      onValue(ref(db, "channels/"), (snapshot) => {
+        setChannels(snapshot.val());
+      });
     } catch (error) {
       console.log(error.message);
     }
@@ -32,6 +34,7 @@ const Contact = () => {
             ))
           : null}
       </div>
+      <AddChannel />
     </section>
   );
 };

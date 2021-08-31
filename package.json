@@ -1,5 +1,5 @@
 {
-  "name": "quarshiprueba",
+  "name": "quarshichat",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
@@ -7,6 +7,9 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.15",
     "firebase": "^9.0.0",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
