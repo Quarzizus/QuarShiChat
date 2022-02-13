@@ -1,7 +1,16 @@
 # QuarShiChat
-You can create channels for talk with your friends.
 
-QuarShitChat is a chat realtime made with firebase (Database, Authentication, Hosting) and React.
+![](src/images/Portada.webp)
 
-## Page 
+I have created an app in where we can init channels of chat for to talk from anywhere part of the world with friends.
+
+## Page
+
 https://quarshichat.web.app/
+
+## Technologies
+
+- React
+- Firebase (Hosting, Database, Authentication)
+- Sass
+- Vite.js
